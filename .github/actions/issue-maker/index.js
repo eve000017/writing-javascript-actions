@@ -12,6 +12,7 @@ async function run() {
 
     //updated from web https://github.com/githubtraining/write-javascript-actions/issues/36?msclkid=b65d4539b61311ecae9087e4f6a7a553
     // need to use "await octokit.rest.issue.create" instead of await octokit.await.issue.create"
+    // seems like octokit got issue to retrieve the data. All issues created is same title
     const newIssue = await octokit.rest.issues.create({
       repo: github.context.repo.repo,
       owner: github.context.repo.owner,
