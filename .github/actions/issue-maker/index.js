@@ -15,8 +15,8 @@ async function run() {
     const newIssue = await octokit.rest.issues.create({
       repo: github.context.repo.repo,
       owner: github.context.repo.owner,
-      title: issueTitle,
-      body: jokeBody
+      title: jokeBody,
+      body: issueTitle
     });
   } catch (error) {
     core.setFailed(error.message);
